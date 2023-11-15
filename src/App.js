@@ -5,17 +5,20 @@ import { useState } from "react";
 
 function App() {
   const [colors, setColors] = useState([
-    { label: "Primary", value: "green" },
-    { label: "Primary Light", value: "light green" },
-    { label: "Secondary", value: "secondary" },
-    { label: "Dark", value: "dark" },
+    { label: "Primary", value: "#0d8484" },
+    { label: "Primary Light", value: "#cfe6e6" },
+    { label: "Nuetral", value: "#727272" },
+    { label: "Dark", value: "#262626" },
   ]);
 
   return (
     <div className="App">
       <header className="App-header">
         {colors.map((color) => (
-          <ColorSelectorPreview label={color.label}></ColorSelectorPreview>
+          <ColorSelectorPreview
+            label={color.label}
+            value={color.value}
+          ></ColorSelectorPreview>
         ))}
 
         <img src={logo} className="App-logo" alt="logo" />

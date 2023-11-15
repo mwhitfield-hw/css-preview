@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 function ColorSelectorPreview(props) {
-  const colors = props.colors;
+  const label = props.label;
+  const value = props.value;
 
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState(value);
 
   const handleSelectedColorChange = (event) => {
     setSelectedColor(event.target.value);
@@ -16,9 +17,10 @@ function ColorSelectorPreview(props) {
   return (
     <>
       <div>
-        <label style={{ fontSize: ".5em" }}>{props.label}</label>
+        <div>
+          <label style={{ fontSize: ".5em" }}>{label}</label>
+        </div>
         <input
-          label="primary"
           type="color"
           onChange={handleSelectedColorChange}
           value={selectedColor}
