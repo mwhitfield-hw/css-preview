@@ -3,8 +3,8 @@ import FontPicker from "react-fontpicker-ts";
 import "react-fontpicker-ts/dist/index.css";
 
 function FontSelectorPreview(props) {
-  const [defaultFont, setDefaultFont] = useState("Roboto");
-  const [decorativeFont, setDecorativeFont] = useState("Arial");
+  const [defaultFont, setDefaultFont] = useState("cursive");
+  const [decorativeFont, setDecorativeFont] = useState("cursive");
   const [selectedFontSize, setFontSize] = useState("1rem");
 
   useEffect(() => {
