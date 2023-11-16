@@ -24,7 +24,7 @@ function App() {
           ></ColorSelectorPreview>
         ))}
         <FontSelectorPreview></FontSelectorPreview>
-        <HeaderPreview backgroundColor="red"></HeaderPreview>
+        <HeaderPreview colors={colors} backgroundColor="red"></HeaderPreview>
       </header>
     </div>
   );
