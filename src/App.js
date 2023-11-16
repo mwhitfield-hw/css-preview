@@ -3,6 +3,7 @@ import "./App.css";
 import ColorSelectorPreview from "./ColorSelectorPreview";
 import { useState } from "react";
 import FontSelectorPreview from "./FontSelectorPreview";
+import HeaderPreview from "./HeaderPreview";
 
 function App() {
   const [colors, setColors] = useState([
@@ -11,18 +12,6 @@ function App() {
     { label: "Neutral", value: "#727272" },
     { label: "Dark", value: "#262626" },
   ]);
-
-  const [fontSize, setFontSize] = useState("1.5rem");
-  const [defaultFont, setDefaultFont] = useState("serif");
-  const [decorativeFont, setDecorativeFont] = useState("cursive");
-
-  const handleSetFontSize = (event) => {
-    setFontSize(event.target.value);
-  };
-
-  const handleDefaultFontChange = (event) => {
-    setDefaultFont(event.target.value);
-  };
 
   return (
     <div className="App">
@@ -34,21 +23,8 @@ function App() {
             value={color.value}
           ></ColorSelectorPreview>
         ))}
-        <FontSelectorPreview
-          fontSize={fontSize}
-          defaultFont={defaultFont}
-          decorativeFont={decorativeFont}
-        ></FontSelectorPreview>
-        <select onChange={handleDefaultFontChange}>
-          <option value="Roboto">Roboto</option>
-          <option value="Times New Roman">Times New Roman</option>
-          <option value="Roboto Slab">Roboto Slab</option>
-        </select>
-        <select onChange={handleSetFontSize}>
-          <option value="1rem">1rem</option>
-          <option value="2rem">2rem</option>
-          <option value="3rem">3rem</option>
-        </select>
+        <FontSelectorPreview></FontSelectorPreview>
+        <HeaderPreview backgroundColor="red"></HeaderPreview>
       </header>
     </div>
   );
