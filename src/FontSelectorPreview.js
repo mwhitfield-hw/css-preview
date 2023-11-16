@@ -29,14 +29,14 @@ function FontSelectorPreview(props) {
       <div>
         <h6
           style={{
-            fontFamily: `${props.defaultFont}`,
+            fontFamily: `${defaultFont}`,
           }}
         >
           The quick brown fox
         </h6>
         <p
           style={{
-            fontFamily: `${props.decorativeFont}`,
+            fontFamily: `${decorativeFont}`,
             fontSize: `${selectedFontSize}`,
           }}
         >
@@ -46,23 +46,21 @@ function FontSelectorPreview(props) {
       <div>
         <div>
           <label style={{ fontSize: "1rem" }}>default font</label>
-
           <select onChange={handleDefaultFontChange}>
-            <option value="Roboto">Roboto</option>
+            <option value="cursive">Cursive</option>
             <option value="Times New Roman">Times New Roman</option>
-            <option value="Roboto Slab">Roboto Slab</option>
+            <option value="Arial">Arial</option>
           </select>
         </div>
         <div>
           <label style={{ fontSize: "1rem" }}>secondary font</label>
           <select onChange={handleDecorativeFontChange}>
-            <option value="Roboto">Roboto</option>
+            <option value="cursive">Cursive</option>
             <option value="Times New Roman">Times New Roman</option>
-            <option value="Roboto Slab">Roboto Slab</option>
+            <option value="Arial">Arial</option>
           </select>
         </div>
         <label style={{ fontSize: "1rem" }}>font size</label>
-
         <select onChange={handleSetFontSize}>
           <option value="1rem">1rem</option>
           <option value="2rem">2rem</option>
