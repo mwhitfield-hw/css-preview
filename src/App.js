@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Preview Stuff
+        <HeaderPreview colors={colors} backgroundColor="red"></HeaderPreview>
         {colors.map((color) => (
           <ColorSelectorPreview
             label={color.label}
@@ -24,7 +24,6 @@ function App() {
           ></ColorSelectorPreview>
         ))}
         <FontSelectorPreview></FontSelectorPreview>
-        <HeaderPreview colors={colors} backgroundColor="red"></HeaderPreview>
       </header>
     </div>
   );

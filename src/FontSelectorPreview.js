@@ -30,6 +30,7 @@ function FontSelectorPreview(props) {
         <h6
           style={{
             fontFamily: `${defaultFont}`,
+            margin: "1rem",
           }}
         >
           The quick brown fox
