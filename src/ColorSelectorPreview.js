@@ -18,7 +18,7 @@ function ColorSelectorPreview(props) {
     <>
       <div>
         <div>
-          <label style={{ fontSize: ".5em" }}>{label}</label>
+          <label style={{ fontSize: "1.5rem" }}>{label}</label>
         </div>
         <input
           type="color"
